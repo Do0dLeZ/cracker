@@ -42,21 +42,27 @@ const rangesValues = {
 const calculateValues = (name, value = 0) => {
   const { soy, sesam, wheat, corn } = rangesValues;
   rangesValues[name].currentValue = parseInt(value);
+
   switch (name) {
     case "soy": {
-      sesam.maxValue = 100 - soy.currentValue;
-      sesam.currentValue =
-        sesam.currentValue > sesam.maxValue
-          ? sesam.maxValue
-          : sesam.currentValue;
+      if (soy.currentValue > soy.maxValue) {
+        soy.currentValue = soy.maxValue;
+      }
+      sesam.maxValue = 100 - (soy.currentValue + wheat.currentValue);
       wheat.maxValue = 100 - (soy.currentValue + sesam.currentValue);
+      console.log(
+        `Sesam max: ${sesam.maxValue} || Wheat max: ${wheat.maxValue}`
+      );
+
       break;
     }
     case "sesam": {
-      soy.maxValue = 100 - sesam.currentValue;
-      soy.currentValue =
-        soy.currentValue > soy.maxValue ? soy.maxValue : soy.currentValue;
+      if (sesam.currentValue > sesam.maxValue) {
+        sesam.currentValue = sesam.maxValue;
+      }
+      soy.maxValue = 100 - (sesam.currentValue + wheat.currentValue);
       wheat.maxValue = 100 - (soy.currentValue + sesam.currentValue);
+      console.log(`Soy max: ${soy.maxValue} || Wheat max: ${wheat.maxValue}`);
       break;
     }
     case "wheat": {
@@ -64,6 +70,10 @@ const calculateValues = (name, value = 0) => {
         wheat.maxValue < wheat.currentValue
           ? wheat.maxValue
           : wheat.currentValue;
+
+      sesam.maxValue = 100 - (soy.currentValue + wheat.currentValue);
+      soy.maxValue = 100 - (sesam.currentValue + wheat.currentValue);
+      console.log(`Soy max: ${soy.maxValue} || Sesam max: ${sesam.maxValue}`);
       break;
     }
   }

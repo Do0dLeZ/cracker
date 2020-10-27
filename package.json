@@ -4,10 +4,11 @@
   "description": "AJAX",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
     "build": "npx webpack --mode production --config webpack.config.js",
     "test": "test",
     "start": "webpack-dev-server --open",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "author": "Kolomiiets Eugene",
   "license": "ISC",
