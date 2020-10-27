@@ -1,0 +1,11 @@
+%divider {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+
+  height: 4px;
+  width: 114px;
+  background-color: $dividerColor;
+}

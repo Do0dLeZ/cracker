@@ -1,0 +1,20 @@
+.about-desc-wrapper {
+  width: 1270px;
+  height: 360px;
+
+  position: absolute;
+  top: 280px;
+  right: -500px;
+  background-color: $aboutDescBackColor;
+}
+
+.about-desc-txt {
+  width: 620px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $aboutDescTxtColor;
+  position: absolute;
+  left: 80px;
+  top: 40px;
+  z-index: 0;
+}

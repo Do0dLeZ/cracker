@@ -1,0 +1,28 @@
+.container {
+  &.about {
+    position: relative;
+  }
+
+  &.about .title {
+    font-family: "FredokaOne";
+    color: $textSecondaryColor;
+    letter-spacing: 10px;
+    font-size: 48px;
+    text-transform: uppercase;
+
+    position: absolute;
+    right: 10px;
+    top: 100px;
+  }
+
+  &.about .container-plate {
+    width: 470px;
+    height: 380px;
+    background-image: url("../../assets/images/plate.png");
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+}

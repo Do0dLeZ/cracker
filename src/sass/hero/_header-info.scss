@@ -1,0 +1,46 @@
+.seed-wrapper {
+  position: relative;
+}
+
+.seed-count {
+  background-color: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  text-align: center;
+}
+
+.info {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.nav-item {
+  margin-right: 90px;
+  
+  & .details-link {
+    @extend %flex-center;
+  }
+
+  &:last-child {
+    margin-right: 20px;
+  }
+}
+
+@mixin arrow() {
+  background-image: url("../../assets/svg/angle-down.svg");
+}
+
+.arrow {
+  @include arrow();
+
+  width: 16px;
+  height: 9px;
+  background-size: contain;
+}

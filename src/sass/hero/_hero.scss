@@ -1,0 +1,43 @@
+.hero-container {
+  width: 100%;
+}
+
+.hero {
+  height: 920px;
+  background-image: url("../../assets/images/hero-main-image.jpg");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+}
+
+h1 {
+  width: 415px;
+  font-family: "FredokaOne";
+  font-size: 46px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: start;
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translateX(-30%);
+  z-index: 1;
+}
+
+.hero {
+  & .button-taste-it {
+    display: block;
+    font-family: "FredokaOne";
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 80px;
+    width: 260px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: $buttonBackColor;
+
+    position: absolute;
+    right: 500px;
+    bottom: -130px;
+  }
+}

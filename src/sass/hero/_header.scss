@@ -1,0 +1,24 @@
+.header-above-wrapper {
+  height: 60px;
+  background-color: $headerColor;
+}
+
+.header-below-wrapper {
+  height: 120px;
+  background-color: $headerColorOpacity;
+}
+
+.container {
+  &.header {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.nav {
+  height: 100%;
+  @extend %flex-center;
+
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $textPrimaryColor;
+}
+
+a {
+  text-decoration: none;
+  color: $textPrimaryColor;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: $containerWidth;
+  margin: auto;
+}

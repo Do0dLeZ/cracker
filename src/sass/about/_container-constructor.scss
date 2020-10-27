@@ -1,0 +1,123 @@
+.container {
+  &.cracker-constructor {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 750px;
+    text-align: center;
+
+    & .title {
+      font-family: "FredokaOne";
+      letter-spacing: 10px;
+      font-size: 48px;
+      color: $textCrackerSelectTtitle;
+      text-transform: uppercase;
+
+      margin-bottom: 65px;
+    }
+
+    & .current-price {
+      font-family: "Lato";
+      color: $textCrackerSelectTtitle;
+      text-transform: uppercase;
+      font-size: 18px;
+      text-align: end;
+      margin-right: 150px;
+    }
+  }
+}
+
+.constructor-list {
+  & .constructor-item {
+    @extend %flex-center;
+    justify-content: space-between;
+
+    & .seed-percent {
+      font-family: "Lato";
+      color: black;
+      font-size: 18px;
+      width: 15px;
+    }
+  }
+
+  & .constructor-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  & .constructor-item.add-to-pack {
+    justify-content: left;
+
+    & .choose-pack {
+      width: 400px;
+      height: 65px;
+      text-transform: uppercase;
+      color: $buttonBackColor;
+      border: 2px solid $buttonBackColor;
+      border-radius: 50px;
+      text-align: center;
+      font-family: "FredokaOne";
+      line-height: 65px;
+      margin-left: 130px;
+    }
+  }
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 620px;
+  height: 3px;
+  border-radius: 5px;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ded5d2;
+    cursor: pointer;
+  }
+
+  &.soy::-webkit-slider-thumb {
+    border: 2px solid #00a651;
+  }
+
+  &.soy {
+    background: #00a651;
+  }
+
+  &.sesam::-webkit-slider-thumb {
+    border: 2px solid #49743f;
+  }
+
+  &.sesam {
+    background: #49743f;
+  }
+
+  &.wheat::-webkit-slider-thumb {
+    border: 2px solid #aba000;
+  }
+
+  &.wheat {
+    background: #aba000;
+  }
+
+  &.corn::-webkit-slider-thumb {
+    border: 2px solid #989592;
+  }
+
+  &.corn {
+    background: #989592;
+  }
+
+  &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+  }
+}
